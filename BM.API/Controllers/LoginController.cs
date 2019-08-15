@@ -22,7 +22,7 @@ namespace BM.API.Controllers
         public ActionResult<LoginResultModel> Get([FromBody]LoginModel model)
         {
             try
-            {
+            { 
                 return Ok(new LoginResultModel { Message = "Success" });
             }
             catch (Exception ex)
