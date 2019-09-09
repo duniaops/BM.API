@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>7.3</LangVersion>
+    <IntermediateOutputPath></IntermediateOutputPath>
+    <DebugSymbols></DebugSymbols>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="Moq" Version="4.13.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="APIs\" />
+    <Folder Include="Services\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BM.API\BM.API.csproj" />
+    <ProjectReference Include="..\BM.Core\BM.Core.csproj" />
+    <ProjectReference Include="..\BM.Domain\BM.Domain.csproj" />
+    <ProjectReference Include="..\BM.Repository\BM.Repository.csproj" />
+    <ProjectReference Include="..\BM.Service\BM.Service.csproj" />
+    <ProjectReference Include="..\BM.Toolkit\BM.Toolkit.csproj" />
+  </ItemGroup>
+</Project>

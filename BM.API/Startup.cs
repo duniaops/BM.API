@@ -37,8 +37,8 @@ namespace BM.API
             });
 
 
-            services.AddTransient<ILoginService, LoginService>();
-            services.AddTransient<ILoginRepository, LoginRepository>();
+            services.AddTransient<IUsersService, UsersService>();
+            services.AddTransient<IUsersRepository, UsersRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
